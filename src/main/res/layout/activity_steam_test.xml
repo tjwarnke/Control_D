@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Not connected to Steam"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect to Steam"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/status_text" />
+
+    <Button
+        android:id="@+id/fetch_games_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch Games"
+        android:enabled="false"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/connect_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/fetch_games_button"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/games_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No games loaded"
+            android:textSize="14sp" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 
