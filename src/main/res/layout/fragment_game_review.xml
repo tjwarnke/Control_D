@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/robbyPurple">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp" />
+
+            <LinearLayout
+                android:id="@+id/gameDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/robbyWenge"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/gameImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"
+                    android:layout_gravity="center"
+                    android:background="@color/robbyKhaki"
+                    app:srcCompat="@drawable/placeholder_image" />
+
+                <TextView
+                    android:id="@+id/gameName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/robbyDogwood"
+                    android:textSize="34sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/publisherLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/publisherString2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="10dp"
+                        android:text="Publisher:"
+                        android:textColor="@color/robbyDogwood"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/publisherString"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/robbyDogwood"
+                        android:textSize="20sp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/genre1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        app:cardBackgroundColor="@color/robbyGreen">
+
+                        <TextView
+                            android:id="@+id/genre1text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:text="genre1"
+                            android:textColor="@color/white" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/genre2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/robbyGreen">
+
+                        <TextView
+                            android:id="@+id/genre2text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="genre2"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/releaseLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/releaseDateString"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="10dp"
+                        android:text="Release Date:"
+                        android:textColor="@color/robbyDogwood"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/releaseDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/robbyDogwood"
+                        android:textSize="20sp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/genre3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/robbyGreen">
+
+                        <TextView
+                            android:id="@+id/genre3text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:text="genre3"
+                            android:textColor="@color/white" />
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            style="@android:style/Widget.Holo.RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:progressTint="#FFEB3B"
+                            android:rating="0.0" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="30dp">
+
+                            <TextView
+                                android:id="@+id/starText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:paddingBottom="10dp"
+                                android:text="0.0"
+                                android:textColor="@color/robbyDogwood"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:id="@+id/reviewCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:text="0 reviews"
+                                android:textColor="@color/robbyDogwood"
+                                android:textSize="12sp" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/listButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp">
+
+                    <Button
+                        android:id="@+id/favoriteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/robbyGreen"
+                        android:padding="10dp"
+                        android:text="+Favorite"
+                        android:textColor="@color/white" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                <Button
+                    android:id="@+id/addToListButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/robbyGreen"
+                    android:padding="10dp"
+                    android:text="+List"
+                    android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/robbyKhaki">
+
+                    <TextView
+                        android:id="@+id/gameDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:text="BLahblahblah blah blah blah blah blah blbah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/review_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/robbyGreen"
+                android:text="@string/create_review" />
+
+            <Button
+                android:id="@+id/view_reviews_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/robbyGreen"
+                android:text="@string/view_reviews" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

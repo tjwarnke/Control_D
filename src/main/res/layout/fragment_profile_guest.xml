@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/robbyPurple"
+        android:padding="16dp">
+
+        <!-- Profile Photo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="2dp" />
+
+        <!-- Add Photo Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/profile_follow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_photo" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/profile_username"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/follow" />
+
+        <!-- Join Date -->
+        <TextView
+            android:id="@+id/join_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <!-- Recent Activity Section -->
+        <TextView
+            android:id="@+id/recent_activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/profile_recent_activity"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/join_date" />
+
+        <!-- Recent Activity RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recent_activity_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/recent_activity_title" />
+
+        <!-- More Activity Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/more_activity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/profile_more_activity"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_activity_list" />
+
+        <!-- Games Section -->
+        <TextView
+            android:id="@+id/games_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/profile_games"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/more_activity_button" />
+
+        <!-- Games RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/games_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/games_title" />
+
+        <!-- Reviews Section -->
+        <TextView
+            android:id="@+id/reviews_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/profile_reviews"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/games_list" />
+
+        <!-- Reviews RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviews_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/reviews_title" />
+
+        <!-- Likes Section -->
+        <TextView
+            android:id="@+id/likes_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/profile_likes"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reviews_list" />
+
+        <!-- Likes RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/likes_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/likes_title" />
+
+        <!-- Following Section -->
+        <TextView
+            android:id="@+id/following_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/profile_following"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likes_list" />
+
+        <!-- Following RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/following_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/following_title" />
+
+        <!-- Followers Section -->
+        <TextView
+            android:id="@+id/followers_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/profile_followers"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/following_list" />
+
+        <!-- Followers RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/followers_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/followers_title" />
+
+        <!-- Stats Section -->
+        <TextView
+            android:id="@+id/stats_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/profile_stats"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/robbyDogwood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/followers_list" />
+
+        <!-- Stats RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stats_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/stats_title"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
